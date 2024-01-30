@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SGI_FRONT",
   "resources": {
-    "hash": "sha256-nkydpm9DDEzlH1ADmEmfJXmq0YvmrPoRfA3fBcw5IUM=",
+    "hash": "sha256-AVwu/GeQjd+34601xSVssTo7QVtO2dKsJuU0ZRKZ3TM=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.vrx2jz7411.js": "sha256-jKNVs4Kqewnv/M783GqkANpXJe9vOcjQ7WCv2nuaUp8="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.0.14kkjimq5k.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-5Z8Ae3iWOWJuZaCXgZg40iyyY5Poek7O5tlwy3s4AC0="
+      "dotnet.native.wasm": "sha256-LJXOAei4186x5pDhIk3KCoQVen3+T9D5RJtl9FuTUB4="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -43,7 +43,7 @@
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
       "netstandard.wasm": "sha256-sLWrV54d5B7LuhDUymVRAwm5QAALTsnEweg3BWL/t5w=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
-      "SGI_FRONT.wasm": "sha256-n/qwcXZ9Pq9okuDMbRGX12PMPQCSUn/3I6+vOpTf5s0=",
+      "SGI_FRONT.wasm": "sha256-hJbnpsVCL+kiIc0NdJVa7YqyLwCt+ENEigsAsLdwjw4=",
       "SixLabors.Fonts.wasm": "sha256-TYAwAMga8iYHgcD5+CMUwDAmCjtNUbzJJP6/e+Xtl5w=",
       "System.Buffers.wasm": "sha256-9WX03H1kec0gbV/BF8MTx9efH9yhDE4Y42T6sWFoi4I=",
       "System.Collections.Concurrent.wasm": "sha256-rQoGR5mALTH3rho02uE7MWOC+BiJT1E5JUzc4YJgvGI=",
