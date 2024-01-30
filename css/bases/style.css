@@ -1,0 +1,71 @@
+:root {
+    --green-color: #849a30;
+    --green-dark-color: #738529;
+    --white-color: #fefffe;
+    --light-table-background: #f4f6fd;
+    --dark-table-background: #ccd6f7;
+    --table-border: #e4e6eb;
+    --black-color: #26282d;
+    --gray-light-color: #989aa1;
+    --red-color: #f41d1d;
+    --yellow-color: #ffc107;
+    --blue-color: #0066ff;
+    --font: "Lexend", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white-color);
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--black-color);
+    line-height: 1.5;
+}
+
+.main-container,
+.main-home,
+.main-with-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-container {
+    width: 100dvw;
+    position: relative;
+}
+
+.main-container,
+.main-with-display {
+    gap: 1rem;
+}
+
+.main-home,
+.main,
+.main-with-display {
+    width: 100%;
+}
+
+.main-home {
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+
+.main,
+.main-with-display {
+    padding: 1rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.code {
+    text-wrap: nowrap;
+}

@@ -1,0 +1,11 @@
+﻿.select-and-button-container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    .select-and-button-container {
+        flex-wrap: wrap;
+    }
+}

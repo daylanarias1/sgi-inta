@@ -1,0 +1,25 @@
+.section-update-supply-information,
+.table-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-update-supply-information {
+    width: calc(30% - 0.75rem);
+}
+
+.table-section {
+    width: calc(70% - 0.75rem);
+}
+
+.table-section .table-container {
+    margin: 0;
+}
+
+@media screen and (max-width: 708px) {
+    .section-update-supply-information,
+    .table-section {
+        width: 100%;
+    }
+}

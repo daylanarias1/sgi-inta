@@ -1,0 +1,144 @@
+.modal {
+    display: none;
+    padding: 1rem;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: none;
+}
+
+.modal-active,
+.modal-content-active,
+.modal-content-closing {
+    display: grid;
+    place-items: center;
+}
+
+.modal-content-active {
+    animation: square-in-center 200ms ease-in-out;
+}
+
+.modal-content-closing {
+    animation: square-in-center-reverse 200ms ease-in-out;
+}
+
+.modal-content {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    position: relative;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+}
+
+.button-close-modal {
+    display: grid;
+    place-items: center;
+    padding: 0.1rem;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+    transition: transform 200ms ease-in-out;
+    &:hover
+
+{
+    transform: scale(1.15);
+}
+
+}
+
+.modal-main {
+    display: grid;
+    place-items: start;
+    gap: 1rem;
+}
+
+.modal-content .table-container {
+    margin: 0rem;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.buttons-request-container,
+.buttons-accept-request-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.buttons-request-container {
+    justify-content: space-between;
+}
+
+/* TODO: VER SI SIRVE */
+.section-tables {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    .section-tables table {
+        flex: 1;
+    }
+
+@keyframes square-in-center {
+    from {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes square-in-center-reverse {
+    from {
+        clip-path: inset(0 0 0 0);
+    }
+
+    to {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal,
+    .modal-content {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .buttons-request-container,
+    .buttons-accept-request-container {
+        justify-content: center;
+    }
+
+    .buttons-request-container {
+        flex-direction: column-reverse;
+    }
+
+        .buttons-request-container .button,
+        .buttons-accept-request-container .button,
+        .buttons-box .button {
+            flex: 1;
+        }
+}

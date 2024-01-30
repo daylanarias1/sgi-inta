@@ -1,0 +1,27 @@
+﻿.title-comments {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.comment-section {
+    width: 100%;
+}
+
+.comment-container:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.comment-container {
+    border: .0625rem solid var(--gray-light-color);
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.comment-name-and-surname {
+    font-weight: bold;
+}
+
+.comment-email {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,60 @@
+﻿.insert-information-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.information-container {
+    width: calc(50% - 0.5rem);
+}
+
+    .information-container .input-box:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+.insert-supply-suppliers-title {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.suppliers-container {
+    padding: 1rem;
+    border: 0.0625rem solid var(--gray-light-color);
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.supplier-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+    .supplier-container:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+.insert-supply-supplier {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    .insert-information-section {
+        flex-direction: column;
+    }
+
+    .information-container {
+        width: 100%;
+    }
+
+    .insert-supply-supplier {
+        flex-wrap: wrap;
+    }
+
+        .insert-supply-supplier .select,
+        .insert-supply-supplier .button {
+            flex: 1;
+        }
+}

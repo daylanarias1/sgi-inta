@@ -1,0 +1,33 @@
+.header {
+    padding: 0.2rem 1rem;
+    width: 100%;
+    background-color: var(--green-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 0.0625rem solid var(--green-dark-color);
+}
+
+.nav-link {
+    display: flex;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.button-open-offcanvas,
+.button-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+}
+
+.button-open-offcanvas {
+    padding: 0.36rem;
+    border-radius: 0.3125rem;
+    background-color: transparent;
+}

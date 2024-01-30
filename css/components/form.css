@@ -1,0 +1,19 @@
+﻿.form-search-engine {
+    position: relative;
+    display: flex;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-reason {
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .form-search-engine {
+        width: 100%;
+    }
+}

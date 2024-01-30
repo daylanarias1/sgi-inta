@@ -1,0 +1,38 @@
+.card {
+    padding: 1rem;
+    width: 14rem;
+    height: 15rem;
+    background-color: var(--green-color);
+    border-radius: 0.3125rem;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+    &:hover
+
+{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: var(--white-color);
+}
+
+@media screen and (max-width: 400px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-link,
+    .card {
+        width: 100%;
+    }
+}

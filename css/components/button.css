@@ -1,0 +1,33 @@
+﻿.buttons-box {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.6rem 1rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
+    &:hover {
+        transform: scale(1.01);
+        background-color: var(--green-dark-color);
+    }
+}
+
+.button-primary {
+    border: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.button-secondary {
+    background-color: var(--white-color);
+    color: var(--green-color);
+    border: .0625rem solid var(--green-color);
+    &:hover {
+        color: var(--white-color);
+    }
+}

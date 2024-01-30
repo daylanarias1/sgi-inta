@@ -1,2 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
 
-noooo
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>INTA</title>
+    <base href="/" />
+    <link rel="icon" type="image/webp" href="./assets/images/logo.webp" />
+    <link rel="stylesheet" href="./css/bases/reset.css" />
+    <link rel="stylesheet" href="./css/bases/style.css" />
+</head>
+
+<body>
+    <div id="app" class="main-container"></div>
+    <script src="./js/showModals.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/CurrieTechnologies.Razor.SweetAlert2/sweetAlert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.0/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.5/jspdf.plugin.autotable.js"></script>
+    <script>
+        window.GenerarPDF = async (requestJSON) => {
+            var request = JSON.parse(requestJSON);
+            var pdf = new jsPDF();
+
+            // Título
+            pdf.setFontSize(15);
+            pdf.text("Solicitud de Suministros", 105, 15, "center");
+
+            // Fuente y tamaño de fuente
+            //pdf.setFont("times", "normal");
+            pdf.setFontSize(11);
+
+            var date = new Date(request.date);
+            var fechaFormateada = date.getDate() + '/' + date.getMonth() + 1 + '/' + date.getFullYear();
+
+            // Cargar la imagen de alta calidad
+            var imgData = '/assets/images/logoInta.png';
+            pdf.addImage(imgData, 'PNG', 15, 3, 35, 20);
+
+            // Marco
+            pdf.setFillColor(240, 240, 240);
+            pdf.roundedRect(13, 26, 184, 20, 5, 5, 'F'); // (x, y, ancho, alto, radioX, radioY, 'F' para rellenar)
+
+            pdf.setTextColor(0, 0, 0);
+
+            pdf.text("Fecha de la solicitud: " + fechaFormateada, 150, 32, "center");
+            pdf.text("N° de solicitud: " + request.requestCod, 20, 32);
+            pdf.text(request.description, 20, 42);
+
+            var columns = ["Artículo", "Cantidad"];
+            var data = request.supplies.map(supply => [supply.supply.supplyName, { content: supply.quantity.toString(), styles: { halign: 'left' } }]);
+
+            pdf.autoTable({
+                startY: 40,
+                head: [columns],
+                body: data,
+                startY: 50,
+                headStyles: {
+                    fillColor: [132, 154, 48],
+                    textColor: [255, 255, 255],
+                },
+                bodyStyles: {
+                    fontStyle: 'normal'
+                }
+                
+            });
+
+            pdf.save("Solicitud_INTA_" + request.requestCod + '.pdf');
+        }
+    </script>
+</body>
+
+</html>

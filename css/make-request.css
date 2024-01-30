@@ -1,0 +1,47 @@
+.supplies-section,
+.supplies-in-request-section,
+.select-supply-container {
+    display: flex;
+}
+
+.supplies-section,
+.supplies-in-request-section {
+    flex-direction: column;
+}
+
+    .supplies-section .form-search-engine {
+        margin-top: 1rem;
+    }
+
+    .supplies-section .table-container {
+        margin-top: 0;
+    }
+
+.supplies-section {
+    width: calc(45% - 0.5rem);
+}
+
+.supplies-in-request-section {
+    width: calc(55% - 0.5rem);
+}
+
+    .supplies-in-request-section .table-container {
+        margin-top: 1rem;
+    }
+
+    .supplies-in-request-section .pagination-container {
+        margin-bottom: 1rem;
+    }
+
+.select-supply-container {
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+    .supplies-section,
+    .supplies-in-request-section {
+        width: 100%;
+    }
+}

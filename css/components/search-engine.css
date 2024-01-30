@@ -1,0 +1,39 @@
+.section-button-and-search-engine {
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-input {
+    padding-right: 4.3rem;
+}
+
+.button-search-engine,
+.clear-button {
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    border: none;
+    border-radius: 0.3125rem;
+    display: grid;
+    place-items: center;
+}
+
+.clear-button {
+    display: none;
+    background-color: var(--white-color);
+    top: 0.0625rem;
+    right: 2.6rem;
+    height: calc(2.22rem - 0.125rem);
+}
+
+.button-search-engine {
+    top: 0;
+    right: 0;
+    height: 2.22rem;
+    background-color: var(--green-color);
+    border-radius: 0.2rem;
+}

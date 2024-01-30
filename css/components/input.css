@@ -1,0 +1,34 @@
+.input,
+.textarea {
+    padding: 0.5rem;
+    border: 0.0625rem solid var(--gray-light-color);
+    border-radius: 0.3125rem;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font);
+}
+
+.quantitative-input {
+    text-align: end;
+}
+
+.textarea {
+    resize: none;
+    height: 7rem;
+}
+
+    .input:focus,
+    .textarea:focus {
+        border-color: var(--green-color);
+        box-shadow: 0 0 0.1875rem 0 var(--green-color);
+    }
+
+.span-for-input-error {
+    max-width: 90%;
+    white-space: wrap;
+    overflow: hidden;
+    margin-top: 0.2rem;
+    color: var(--red-color);
+    font-size: 0.7rem;
+}

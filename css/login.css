@@ -1,0 +1,39 @@
+.main-login {
+    min-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-image-logo {
+    width: 20rem;
+    height: 15rem;
+}
+
+.login-form {
+    padding: 1rem;
+    width: 25rem;
+}
+
+.login-form .input-box {
+    margin-bottom: 1rem;
+}
+
+.login-form .button {
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .login-image-logo {
+        width: 100%;
+        height: min-content;
+        object-fit: contain;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+}

@@ -1,0 +1,126 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.section-container {
+    background-color: var(--green-color);
+    border: 0.0625rem solid var(--green-dark-color);
+    padding: 0.3rem;
+    margin-top: 1rem;
+}
+
+.head-row {
+    font-weight: bold;
+}
+
+.body-row:hover,
+.body-row:hover .sticky-column {
+    background-color: var(--dark-table-background);
+}
+
+.sticky-column {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: var(--white-color);
+}
+
+    .sticky-column::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.0625rem;
+        bottom: 0;
+        width: 100%;
+        border-right: 0.0625rem solid var(--table-border);
+        border-left: 0.0625rem solid var(--table-border);
+        box-shadow: 0.125rem 0 0.1875rem rgba(0, 0, 0, 0.1);
+    }
+
+.head-column,
+.body-column {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    border: 0.0625rem solid var(--table-border);
+}
+
+.identity-name,
+.indentity-brand {
+    display: block;
+}
+
+.identity-brand {
+    font-size: 0.9rem;
+    color: var(--gray-light-color);
+}
+
+.quantitative-column {
+    text-align: right;
+}
+
+.price::before {
+    content: "₡ ";
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.table-button,
+.pagination-button {
+    display: grid;
+    place-items: center;
+    padding: 0.2rem;
+}
+
+.table-button {
+    border: none;
+    border-radius: 0.3125rem;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.pagination-button {
+    width: 2.5rem;
+}
+
+.table-button:hover,
+.table-button:active {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.button-details {
+    background-color: var(--blue-color);
+}
+
+.button-update {
+    background-color: var(--yellow-color);
+}
+
+.button-delete {
+    background-color: var(--red-color);
+}
+
+.button-handle-request {
+    background-color: var(--green-color);
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
